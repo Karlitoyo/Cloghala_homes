@@ -1,0 +1,42 @@
+import React from "react";
+import Image from "next/image";
+import { historyParagraph, historyTitle } from "../../common/constants/constants";
+
+const imageArray = [
+    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
+    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
+    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
+    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
+    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
+    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
+    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
+    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
+    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
+    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
+    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
+    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
+    // Add more images as needed
+];
+
+const TopMidSection = () => (
+    <section className="flex flex-col md:flex-row h-screen w-full font-montserrat">
+        {/* Left Side */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-6 p-6">
+            {imageArray.map((img, index) => (
+                <div key={index} className="w-32 h-32 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            ))}
+        </div>
+
+    </section>
+);
+
+export default TopMidSection;
+

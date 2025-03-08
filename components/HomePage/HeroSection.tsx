@@ -16,7 +16,7 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-2xl">
+      <div className="relative z-10">
         <div className="mb-4">
           <h1 className="text-5xl font-bold">Welcome to Cloghala Homes</h1>
         </div>
