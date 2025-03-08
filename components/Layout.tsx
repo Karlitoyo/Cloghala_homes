@@ -47,7 +47,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
       {/* Navbar */}
       <header className="fixed top-0 left-0 w-full z-50 transition duration-300 bg-dark">
-        <nav className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+        <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4 ${router.pathname === "/about" ? "r-10" : "pr-4"}`}>
           {/* Logo */}
           <a
             href="#"
@@ -66,20 +66,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <Link href="/" className={`py-2 px-3 transition ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-gray-900"} ${isDark ? "text-gray-900" : "text-white"}`}>Home</Link>
+            <Link href="/" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Home</Link>
             <div className="relative">
-              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className={`py-2 px-3 flex items-center transition hover:text-gray-900 ${isDark ? "text-gray-900" : "text-white"}`}>
-              Our Work <ChevronDown className={`ml-2 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} size={16} />
+              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className={`text-yellowApp py-2 px-3 flex items-center transition hover:text-white ${isDark ? "text-gray-900" : "text-white"}`}>
+              Our Work
               </button>
-              <div className={`absolute left-0 mt-2 backdrop-blur-md bg-gray-900/90 border border-gray-700 rounded-lg w-56 shadow-lg transform transition-all duration-200 ease-in-out ${
-              isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-              }`}>
-              <Link href="socialHousing" className="block px-4 py-3 text-white hover:bg-gray-800 rounded-t-lg transition duration-150">Social Housing</Link>
-              <Link href="emergencyHousing" className="block px-4 py-3 text-white hover:bg-gray-800 rounded-b-lg transition duration-150">Emergency Accommodation</Link>
-              </div>
             </div>
-            <Link href="/about" className={`py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-gray-900"} ${isDark ? "text-gray-900" : "text-white"}`}>About</Link>
-            <Link href="/contact" className={`py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-900" : "hover:text-gray-900"} ${isDark ? "text-gray-900" : "text-white"}`}>Contact</Link>
+            <Link href="/about" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>About</Link>
+            <Link href="/contact" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-100" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Contact</Link>
           </div>
 
           {/* Mobile Burger Menu Button */}

@@ -1,22 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { historyParagraph, historyTitle } from "../../common/constants/constants";
+import { imageArray } from "../../common/constants/constants";
 
-const imageArray = [
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    // Add more images as needed
-];
 
 const TopMidSection = () => (
     <section className="flex flex-col md:flex-row h-screen w-full font-montserrat">
