@@ -11,8 +11,8 @@ const TopHeroSection = () => (
 
         {/* Right Side */}
         <div className="w-full md:w-1/2 h-full bg-yellowApp flex items-center justify-center text-white p-10 rounded-bl-heroCustom-bl">
-            <ul className="text-black">
-                <li >We Provide:</li>
+            <ul className="text-black font-bold">
+                <li>We Provide:</li>
                 <li>Construction</li>
                 <li>Renovations & Upgrades</li>
                 <li>Building Maintenance</li>

@@ -11,13 +11,4 @@ export const imageArray = [
     { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
     { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
     { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
-    { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
-    { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
-    // Add more images as needed
 ];
