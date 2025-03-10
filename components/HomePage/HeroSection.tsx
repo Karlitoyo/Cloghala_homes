@@ -18,7 +18,7 @@ const HeroSection = () => (
       {/* Content */}
       <div className="relative z-10">
         <div className="mb-4">
-          <h1 className="text-5xl font-bold">Welcome to Cloghala Homes</h1>
+          <h1 className="text-5xl font-bold text-yellowApp">Welcome to Cloghala Homes</h1>
         </div>
       </div>
     </section>

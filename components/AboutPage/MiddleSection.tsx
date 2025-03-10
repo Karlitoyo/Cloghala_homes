@@ -7,7 +7,7 @@ const MiddleSection = () => (
   </div>
 
   {/* Grid Layout */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-40 mt-40">
     
     {/* Text Fields (6 total, 3 per row) */}
     {[
