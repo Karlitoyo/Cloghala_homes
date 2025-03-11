@@ -55,7 +55,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               }`}
           >
             <Image
-              src="/images/Logo/logo.jpg"
+              src="/images/homePage/Logo/logo.jpg"
               alt="Logo"
               width={75}
               height={75}
