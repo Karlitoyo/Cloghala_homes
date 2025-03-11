@@ -21,20 +21,20 @@ const MiddleBottomSection = () => (
             {/* First Row - Four text areas */}
             <div className="flex flex-wrap justify-evenly w-full">
               <div className="text-center my-4">
-                <h3 className="text-xl font-bold">100%</h3>
-                <p className="text-sm">Client Retention</p>
+                <h3 className="text-xl font-bold lg:text-5xl md:text-3xl md:text-3xl">100%</h3>
+                <p className="text-sm lg:text-3xl md:text-xl md:text-xl">Client Retention</p>
               </div>
               <div className="text-center my-4">
-                <h3 className="text-xl font-bold">50</h3>
-                <p className="text-sm">Years of Service</p>
+                <h3 className="text-xl font-bold lg:text-5xl md:text-3xl">50</h3>
+                <p className="text-sm lg:text-3xl md:text-xl">Years of Service</p>
               </div>
               <div className="text-center my-4">
-                <h3 className="text-xl font-bold">30+</h3>
-                <p className="text-sm">Team of Professionals</p>
+                <h3 className="text-xl font-bold lg:text-5xl md:text-3xl">30+</h3>
+                <p className="text-sm lg:text-3xl md:text-xl">Team of Professionals</p>
               </div>
               <div className="text-center my-4">
-                <h3 className="text-xl font-bold">1500+</h3>
-                <p className="text-sm">Satisfied Clients</p>
+                <h3 className="text-xl font-bold lg:text-5xl md:text-3xl">1500+</h3>
+                <p className="text-sm lg:text-3xl md:text-xl">Satisfied Clients</p>
               </div>
             </div>
           </div>
