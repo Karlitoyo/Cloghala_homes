@@ -20,11 +20,11 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight * 0.95); // Adjusts dynamically to screen size
     };
-  
+
     if (router.pathname === "/") {
       window.addEventListener("scroll", handleScroll);
     }
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -51,27 +51,22 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
           {/* Logo */}
           <a
             href="#"
-            className={`text-2xl font-semibold transition duration-300 ${
-              isDark ? "text-gray-900" : "text-white"
-            }`}
+            className={`text-2xl font-semibold transition duration-300 ${isDark ? "text-gray-900" : "text-white"
+              }`}
           >
-                        <Image
-                        src="/images/Logo/logo.jpg"
-                        alt="Logo"
-                        width={75}
-                        height={75}
-                        priority
-                        />
+            <Image
+              src="/images/Logo/logo.jpg"
+              alt="Logo"
+              width={75}
+              height={75}
+              priority
+            />
           </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Home</Link>
-            <div className="relative">
-              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className={`text-yellowApp py-2 px-3 flex items-center transition hover:text-white ${isDark ? "text-gray-900" : "text-white"}`}>
-              Our Work
-              </button>
-            </div>
+            <Link href="/ourWork" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/ourWork" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Our Work</Link>
             <Link href="/about" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>About</Link>
             <Link href="/contact" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-100" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Contact</Link>
           </div>
@@ -82,33 +77,32 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
           </button>
 
           {/* Mobile Menu */}
-            <div
-            className={`fixed top-0 left-0 w-full h-screen bg-gray-900 text-white flex flex-col items-center justify-center transition-transform duration-300 ${
-              isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-            }`}
-            >
+          <div
+            className={`fixed top-0 left-0 w-full h-screen bg-gray-900 text-white flex flex-col items-center justify-center transition-transform duration-300 ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+              }`}
+          >
             <button onClick={toggleMenu} className="absolute top-5 right-5 text-white">
               <X size={30} />
             </button>
             <ul className="space-y-6 text-2xl text-center">
               <li><Link href="/" onClick={toggleMenu} className="hover:underline">Home</Link></li>
               <li className="flex flex-col items-center">
-              <div className="flex items-center justify-center">
-                <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="hover:underline flex items-center">
-                Our Work <ChevronDown className="ml-2" size={16} />
-                </button>
-              </div>
-              {isDropdownOpen && (
-                <ul className="mt-2 space-y-2 text-lg">
-                <li><Link href="/socialHousing" onClick={toggleMenu} className="block hover:underline">Social Housing</Link></li>
-                <li><Link href="/emergencyHousing" onClick={toggleMenu} className="block hover:underline">Emergency Accommodation</Link></li>
-                </ul>
-              )}
+                <div className="flex items-center justify-center">
+                  <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="hover:underline flex items-center">
+                    Our Work <ChevronDown className="ml-2" size={16} />
+                  </button>
+                </div>
+                {isDropdownOpen && (
+                  <ul className="mt-2 space-y-2 text-lg">
+                    <li><Link href="/socialHousing" onClick={toggleMenu} className="block hover:underline">Drop1</Link></li>
+                    <li><Link href="/emergencyHousing" onClick={toggleMenu} className="block hover:underline">Drop2</Link></li>
+                  </ul>
+                )}
               </li>
               <li><Link href="/about" onClick={toggleMenu} className="hover:underline">About</Link></li>
               <li><Link href="/contact" onClick={toggleMenu} className="hover:underline">Contact</Link></li>
             </ul>
-            </div>
+          </div>
         </nav>
       </header>
 
