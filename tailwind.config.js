@@ -20,6 +20,7 @@ module.exports = {
       },
       borderRadius: {
         "heroCustom-bl": "300px",
+        "midAboutCustom-bl": "150px",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

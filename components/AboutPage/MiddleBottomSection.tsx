@@ -14,7 +14,7 @@ const MiddleBottomSection = () => (
         {/* First Div - Stats */}
         <div className="relative p-6 rounded-lg shadow-lg self-start w-full h-full flex items-center justify-center">
           {/* Background Layer */}
-          <div className="absolute inset-0 bg-yellowApp bg-opacity-15 rounded-lg z-0"></div>
+          <div className="absolute inset-0 bg-yellowApp bg-opacity-15 rounded-lg z-0 md:rounded-br-midAboutCustom-bl md:rounded-tr-midAboutCustom-bl"></div>
 
           {/* Content Layer */}
           <div className="relative z-10 text-yellowApp text-center flex justify-evenly w-full">
@@ -43,7 +43,7 @@ const MiddleBottomSection = () => (
         {/* Second Div - Stats */}
         <div className="relative p-6 rounded-lg shadow-lg self-start w-full h-full flex items-center justify-center">
           {/* Background Layer */}
-          <div className="absolute inset-0 bg-yellowApp bg-opacity-15 rounded-lg z-0"></div>
+          <div className="absolute inset-0 bg-yellowApp bg-opacity-15 rounded-lg z-0 md:rounded-br-midAboutCustom-bl md:rounded-tr-midAboutCustom-bl"></div>
 
           {/* Content Layer */}
           <div className="relative z-10 text-yellowApp text-center flex justify-evenly w-full">
