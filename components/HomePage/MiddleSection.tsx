@@ -1,51 +1,119 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.2 },
+  }),
+};
 
 const MiddleSection = () => (
   <section className="relative flex flex-col items-center justify-center w-full min-h-screen p-10 text-white bg-dark">
     {/* Section Title */}
-    <h1 className="text-4xl font-bold text-center text-yellowApp m-20">Services We Provide</h1>
+    <motion.h1
+      className="text-4xl font-bold text-center text-yellowApp m-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+      custom={0}
+    >
+      Services We Provide
+    </motion.h1>
 
-    {/* Content Container */}
-    <div className="relative flex flex-col md:flex-row items-center w-2/3 bg-footerBrown rounded-lg p-10 shadow-lg">
-      
+    {/* First Service Block */}
+    <motion.div
+      className="relative flex flex-col md:flex-row items-center w-2/3 bg-footerBrown rounded-lg p-10 shadow-lg"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+      custom={1}
+    >
       {/* Left Side - Home Renovations */}
-      <div className="w-full md:w-1/2 flex flex-col items-start text-left">
+      <motion.div
+        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        variants={fadeInUp}
+        custom={2}
+      >
         <h3 className="text-2xl font-bold text-yellowApp">Home Renovations</h3>
         <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
-          <li>Construction</li>
-          <li>Renovations & Upgrades</li>
-          <li>Building Maintenance</li>
-          <li>Project Management</li>
-          <li>Mechanical & Plumbing Integration</li>
+          {[
+            "Construction",
+            "Renovations & Upgrades",
+            "Building Maintenance",
+            "Project Management",
+            "Mechanical & Plumbing Integration",
+          ].map((item, index) => (
+            <motion.li key={index} variants={fadeInUp} custom={index + 3}>
+              {item}
+            </motion.li>
+          ))}
         </ul>
-      </div>
+      </motion.div>
 
-      {/* SVG to the Right of First List */}
-      <div className="hidden md:flex justify-center items-center w-1/2">
-        <img src="/images/homePage/Svgs/home_renovations.svg" alt="Home Renovation Icon" className="w-40 h-40 md:w-64 md:h-64" />
-      </div>
-    </div>
+      {/* SVG Image */}
+      <motion.div
+        className="hidden md:flex justify-center items-center w-1/2"
+        variants={fadeInUp}
+        custom={8}
+      >
+        <img
+          src="/images/homePage/Svgs/home_renovations.svg"
+          alt="Home Renovation Icon"
+          className="w-40 h-40 md:w-64 md:h-64"
+        />
+      </motion.div>
+    </motion.div>
 
-    {/* Bottom Section */}
-    <div className="relative flex flex-col md:flex-row items-center w-2/3 bg-footerBrown rounded-lg p-10 shadow-lg mt-10">
-      
-      {/* Bottom Left SVG */}
-      <div className="hidden md:flex justify-center items-center w-1/2">
-        <img src="/images/homePage/Svgs/engineer.svg" alt="Engineer Icon" className="w-40 h-40 md:w-64 md:h-64" />
-      </div>
+    {/* Second Service Block */}
+    <motion.div
+      className="relative flex flex-col md:flex-row items-center w-2/3 bg-footerBrown rounded-lg p-10 shadow-lg mt-10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+      custom={9}
+    >
+      {/* SVG Image */}
+      <motion.div
+        className="hidden md:flex justify-center items-center w-1/2"
+        variants={fadeInUp}
+        custom={10}
+      >
+        <img
+          src="/images/homePage/Svgs/engineer.svg"
+          alt="Engineer Icon"
+          className="w-40 h-40 md:w-64 md:h-64"
+        />
+      </motion.div>
 
       {/* Right Side - Additional Services */}
-      <div className="w-full md:w-1/2 flex flex-col items-start text-left">
+      <motion.div
+        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        variants={fadeInUp}
+        custom={11}
+      >
         <h3 className="text-2xl font-bold text-yellowApp">Additional Services</h3>
         <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
-          <li>Interior & Exterior Design</li>
-          <li>Energy Efficiency Upgrades</li>
-          <li>Custom Carpentry</li>
-          <li>Smart Home Installations</li>
-          <li>Electrical & HVAC Systems</li>
+          {[
+            "Interior & Exterior Design",
+            "Energy Efficiency Upgrades",
+            "Custom Carpentry",
+            "Smart Home Installations",
+            "Electrical & HVAC Systems",
+          ].map((item, index) => (
+            <motion.li key={index} variants={fadeInUp} custom={index + 12}>
+              {item}
+            </motion.li>
+          ))}
         </ul>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   </section>
 );
 
