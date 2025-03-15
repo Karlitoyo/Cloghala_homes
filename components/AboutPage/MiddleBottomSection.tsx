@@ -1,10 +1,13 @@
 import React from "react";
+import Link from "next/link";
 
 const MiddleBottomSection = () => (
   <section className="relative w-full bg-dark px-10 py-16 text-white">
     {/* Contact Button */}
     <div className="max-w-6xl mx-auto text-center mb-10">
-      <button className="bg-yellowApp text-dark px-4 py-2 rounded-full font-bold">Contact Us</button>
+      <Link href="/contact">
+        <button className="bg-yellowApp text-dark px-4 py-2 rounded-full font-bold">Contact Us</button>
+      </Link>
     </div>
 
     {/* Grid Layout - 2/3 for stats, 1/3 for images */}
