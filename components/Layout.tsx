@@ -3,14 +3,14 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react"; // Icons for burger menu and dropdown
+import { Menu, X } from "lucide-react"; // Icons for burger menu and dropdown
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+const Layout = ({ children, title = "Layout" }: Props) => {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +47,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
       {/* Navbar */}
       <header className="fixed top-0 left-0 w-full z-50 transition duration-300 bg-dark">
-        <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4 ${router.pathname === "/about" ? "r-10" : "pr-4"}`}>
+        <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4 ${router.pathname === "/" ? "r-10" : "pr-4"}`}>
           {/* Logo */}
           <a
             href="#"
@@ -72,33 +72,18 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
           </div>
 
           {/* Mobile Burger Menu Button */}
-          <button onClick={toggleMenu} className="md:hidden text-gray-900 z-50">
+          <button onClick={toggleMenu} className="md:hidden text-yellowApp z-50">
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
           {/* Mobile Menu */}
           <div
-            className={`fixed top-0 left-0 w-full h-screen bg-gray-900 text-white flex flex-col items-center justify-center transition-transform duration-300 ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+            className={`fixed top-0 left-0 w-full h-screen bg-dark text-yellowApp flex flex-col items-center justify-center transition-transform duration-300 ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
               }`}
           >
-            <button onClick={toggleMenu} className="absolute top-5 right-5 text-white">
-              <X size={30} />
-            </button>
             <ul className="space-y-6 text-2xl text-center">
               <li><Link href="/" onClick={toggleMenu} className="hover:underline">Home</Link></li>
-              <li className="flex flex-col items-center">
-                <div className="flex items-center justify-center">
-                  <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="hover:underline flex items-center">
-                    Our Work <ChevronDown className="ml-2" size={16} />
-                  </button>
-                </div>
-                {isDropdownOpen && (
-                  <ul className="mt-2 space-y-2 text-lg">
-                    <li><Link href="/socialHousing" onClick={toggleMenu} className="block hover:underline">Drop1</Link></li>
-                    <li><Link href="/emergencyHousing" onClick={toggleMenu} className="block hover:underline">Drop2</Link></li>
-                  </ul>
-                )}
-              </li>
+              <li><Link href="/ourWork" onClick={toggleMenu} className="hover:underline">Our Work</Link></li>
               <li><Link href="/about" onClick={toggleMenu} className="hover:underline">About</Link></li>
               <li><Link href="/contact" onClick={toggleMenu} className="hover:underline">Contact</Link></li>
             </ul>
