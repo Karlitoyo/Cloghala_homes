@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from "react";
+import React, { useState, ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -12,25 +12,7 @@ type Props = {
 
 const Layout = ({ children, title = "Layout" }: Props) => {
   const router = useRouter();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight * 0.95); // Adjusts dynamically to screen size
-    };
-
-    if (router.pathname === "/") {
-      window.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [router.pathname]);
-
-  const isDark = router.pathname !== "/" || isScrolled;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,12 +29,11 @@ const Layout = ({ children, title = "Layout" }: Props) => {
 
       {/* Navbar */}
       <header className="fixed top-0 left-0 w-full z-50 transition duration-300 bg-dark">
-        <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4 ${router.pathname === "/" ? "r-10" : "pr-4"}`}>
+        <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4`}>
           {/* Logo */}
           <a
             href="#"
-            className={`text-2xl font-semibold transition duration-300 ${isDark ? "text-gray-900" : "text-white"
-              }`}
+            className={`text-2xl font-semibold transition duration-300`}
           >
             <Image
               src="/images/homePage/Logo/logo.jpg"
@@ -65,10 +46,10 @@ const Layout = ({ children, title = "Layout" }: Props) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <Link href="/" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Home</Link>
-            <Link href="/ourWork" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/ourWork" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Our Work</Link>
-            <Link href="/about" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>About</Link>
-            <Link href="/contact" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-100" : "hover:text-white"} ${isDark ? "text-gray-900" : "text-white"}`}>Contact</Link>
+            <Link href="/" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Home</Link>
+            <Link href="/ourWork" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/ourWork" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Our Work</Link>
+            <Link href="/about" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>About</Link>
+            <Link href="/contact" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Contact</Link>
           </div>
 
           {/* Mobile Burger Menu Button */}
