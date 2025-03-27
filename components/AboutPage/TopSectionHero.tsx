@@ -54,7 +54,7 @@ const TopHeroSection = () => (
       viewport={{ once: true }}
     >
       <motion.ul
-      className="text-black text-xl sm:text-2xl text-center md:list-disc sm:text-center space-y-4 sm:w-3/4"
+      className="text-black text-xl sm:text-2xl text-center sm:text-center space-y-4 sm:w-3/4"
       variants={fadeInRight}
       custom={2}
       >

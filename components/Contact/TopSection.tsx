@@ -6,7 +6,6 @@ const TopSection = () => {
     lastName: "",
     email: "",
     phone: "",
-    subject: "General Inquiry",
     message: "",
   });
 
