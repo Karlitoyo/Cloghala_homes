@@ -19,7 +19,7 @@ const TopSection = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-40 bg-dark font-montserrat vh-100">
+    <section className="relative flex flex-col items-center justify-center w-full py-40 sm:py-40 md:py-64 bg-dark font-montserrat">
     <div className="flex flex-col md:flex-row max-w-4xl mx-auto my-10 shadow-lg rounded-lg overflow-hidden">
       {/* Contact Info */}
       <div className="md:w-1/3 bg-dark text-yellowApp p-6 flex flex-col justify-between">
