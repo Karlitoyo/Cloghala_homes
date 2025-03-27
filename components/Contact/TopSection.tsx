@@ -27,9 +27,10 @@ const TopSection = () => {
         <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
         <p className="text-yellowApp">Contact us by phone or send a message and we will contact you!</p>
         <div className="mt-6">
-          <p className="flex items-center"><span className="mr-2">📞</span> +012 3456 789</p>
-          <p className="flex items-center"><span className="mr-2">✉️</span> demo@gmail.com</p>
-          <p className="flex items-center"><span className="mr-2">📍</span> 123 Fake St, Ireland</p>
+          <p className="flex items-center"><span className="mr-2">📞</span> 083 168 0801</p>
+          <p className="flex items-center"><span className="mr-2">✉️</span> Info@cloghalahomes.ie </p>
+          <p className="flex items-center"><span className="mr-2">📍</span> Hebron Business Park, 39B Hebron Road, Leggetsrath West, Kilkenny R95 C43W
+          </p>
         </div>
       </div>
 
@@ -45,15 +46,6 @@ const TopSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className="border p-2 rounded w-full" required />
             <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" className="border p-2 rounded w-full" required />
-          </div>
-          <div>
-            <label className="block text-yellowApp">Select Subject:</label>
-            <select name="subject" value={formData.subject} onChange={handleChange} className="border p-2 rounded w-full">
-              <option>General Inquiry</option>
-              <option>Support</option>
-              <option>Feedback</option>
-              <option>Other</option>
-            </select>
           </div>
           <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write your message.." className="border p-2 rounded w-full h-24" required></textarea>
           <button type="submit" className="bg-footerBrown text-yellowApp px-6 py-2 rounded-lg hover:bg-gray-700">Send Message</button>

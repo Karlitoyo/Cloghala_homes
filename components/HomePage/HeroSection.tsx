@@ -9,6 +9,7 @@ const HeroSection = () => (
         alt="Background"
         layout="fill"
         objectFit="cover"
+        priority={true}
       />
     </div>
     {/* Overlay for better text visibility */}

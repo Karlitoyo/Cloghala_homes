@@ -31,14 +31,14 @@ const TopHeroSection = () => (
       viewport={{ once: true }}
     >
       <motion.h2
-        className="text-2xl sm:text-3xl font-bold text-center sm:text-left text-yellowApp"
+        className="text-2xl sm:text-3xl font-bold text-center sm:text-center text-yellowApp"
         variants={fadeInLeft}
         custom={0}
       >
         {historyTitle}
       </motion.h2>
       <motion.p
-        className="mt-4 text-center sm:text-left text-sm sm:text-base"
+        className="mt-4 text-center sm:text-center text-sm sm:text-base"
         variants={fadeInLeft}
         custom={1}
       >
@@ -54,28 +54,28 @@ const TopHeroSection = () => (
       viewport={{ once: true }}
     >
       <motion.ul
-        className="text-black text-xl sm:text-2xl list-disc space-y-4 sm:w-3/4"
-        variants={fadeInRight}
-        custom={2}
+      className="text-black text-xl sm:text-2xl text-center md:list-disc sm:text-center space-y-4 sm:w-3/4"
+      variants={fadeInRight}
+      custom={2}
       >
-        <motion.h3
-          className="font-bold text-center sm:text-left"
-          variants={fadeInRight}
-          custom={3}
-        >
-          We Provide:
-        </motion.h3>
-        {[
-          "Construction",
-          "Renovations & Upgrades",
-          "Building Maintenance",
-          "Project Management",
-          "Mechanical & Plumbing Integration",
-        ].map((item, index) => (
-          <motion.li key={index} variants={fadeInRight} custom={index + 4}>
-            {item}
-          </motion.li>
-        ))}
+      <motion.h3
+        className="font-bold text-center"
+        variants={fadeInRight}
+        custom={3}
+      >
+        We Provide:
+      </motion.h3>
+      {[
+        "Construction",
+        "Renovations & Upgrades",
+        "Building Maintenance",
+        "Project Management",
+        "Mechanical & Plumbing Integration",
+      ].map((item, index) => (
+        <motion.li key={index} variants={fadeInRight} custom={index + 4}>
+        {item}
+        </motion.li>
+      ))}
       </motion.ul>
     </motion.div>
   </section>

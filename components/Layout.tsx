@@ -32,7 +32,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
         <nav className={`max-w-screen-xl flex items-center justify-between mx-auto p-4`}>
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             className={`text-2xl font-semibold transition duration-300`}
           >
             <Image
@@ -47,7 +47,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Home</Link>
-            <Link href="/ourWork" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/ourWork" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Our Work</Link>
+            {/* <Link href="/ourWork" className={`py-2 px-3 transition text-yellowApp ${router.pathname === "/ourWork" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Our Work</Link> */}
             <Link href="/about" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/about" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>About</Link>
             <Link href="/contact" className={`text-yellowApp py-2 px-3 transition ${router.pathname === "/contact" ? "font-bold border-b-2 border-gray-900" : "hover:text-white"}`}>Contact</Link>
           </div>
@@ -64,7 +64,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
           >
             <ul className="space-y-6 text-2xl text-center">
               <li><Link href="/" onClick={toggleMenu} className="hover:underline">Home</Link></li>
-              <li><Link href="/ourWork" onClick={toggleMenu} className="hover:underline">Our Work</Link></li>
+              {/* <li><Link href="/ourWork" onClick={toggleMenu} className="hover:underline">Our Work</Link></li> */}
               <li><Link href="/about" onClick={toggleMenu} className="hover:underline">About</Link></li>
               <li><Link href="/contact" onClick={toggleMenu} className="hover:underline">Contact</Link></li>
             </ul>

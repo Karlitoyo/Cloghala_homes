@@ -3,7 +3,7 @@ import TopSection from "../components/OurWork/topSection";
 
 const OurWorkPage = () => (
   <Layout title="Our Work | Cloghala">
-    <TopSection />
+    {/* <TopSection /> */}
   </Layout>
 );
 

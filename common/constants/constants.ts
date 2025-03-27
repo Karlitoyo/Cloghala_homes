@@ -7,7 +7,7 @@ export const historyParagraph = "Built on the strong foundation of HPC, a truste
 /** About Page */
 
 export const imageArray = [
-    { src: "/images/aboutPage/digger.jpg", alt: "Digger" },
+    { src: "/images/aboutPage/bathroom.jpg", alt: "Digger" },
     { src: "/images/aboutPage/commercial.jpg", alt: "Commercial" },
     { src: "/images/aboutPage/man-roof.jpg", alt: "Image 3" },
     { src: "/images/aboutPage/digger.jpg", alt: "Digger" },

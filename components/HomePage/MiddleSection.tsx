@@ -103,9 +103,6 @@ const MiddleSection = () => (
           {[
             "Interior & Exterior Design",
             "Energy Efficiency Upgrades",
-            "Custom Carpentry",
-            "Smart Home Installations",
-            "Electrical & HVAC Systems",
           ].map((item, index) => (
             <motion.li key={index} variants={fadeInUp} custom={index + 12}>
               {item}
