@@ -63,7 +63,7 @@ const TopHeroSection = () => (
         variants={fadeInRight}
         custom={3}
       >
-        We Provide:
+        We Provide
       </motion.h3>
       {[
         "Construction",
