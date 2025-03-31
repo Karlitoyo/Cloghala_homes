@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm, ValidationError } from '@formspree/react';
+import dotenv from 'dotenv';
+
+// Initialize dotenv to load environment variables from .env file
+dotenv.config();
 
 const TopSection = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
