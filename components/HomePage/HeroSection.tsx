@@ -10,7 +10,6 @@ const HeroSection = () => (
         fill
         sizes="100vw"
         style={{ objectFit: 'cover' }}
-        priority={true}
         quality={80}
         loading="lazy"
       />

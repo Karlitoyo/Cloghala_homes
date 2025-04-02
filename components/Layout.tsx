@@ -38,7 +38,6 @@ const Layout = ({ children, title = "Layout" }: Props) => {
               alt="Logo"
               width={75}
               height={75}
-              priority
               quality={100}
               loading="lazy"
             />
