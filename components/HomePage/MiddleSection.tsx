@@ -36,12 +36,12 @@ const MiddleSection = () => (
     >
       {/* Left Side - Home Renovations */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         variants={fadeInUp}
         custom={2}
       >
         <h3 className="text-2xl font-bold text-yellowApp">Home Renovations</h3>
-        <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
+        <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
             "Construction",
             "Renovations & Upgrades",
@@ -49,7 +49,7 @@ const MiddleSection = () => (
             "Project Management",
             "Mechanical & Plumbing Integration",
           ].map((item, index) => (
-            <motion.li key={index} variants={fadeInUp} custom={index + 3}>
+            <motion.li key={index} variants={fadeInUp} custom={index + 3} className="list-none md:list-disc">
               {item}
             </motion.li>
           ))}
@@ -94,17 +94,17 @@ const MiddleSection = () => (
 
       {/* Right Side - Additional Services */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         variants={fadeInUp}
         custom={11}
       >
         <h3 className="text-2xl font-bold text-yellowApp">Additional Services</h3>
-        <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
+        <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
             "Interior & Exterior Design",
             "Energy Efficiency Upgrades",
           ].map((item, index) => (
-            <motion.li key={index} variants={fadeInUp} custom={index + 12}>
+            <motion.li key={index} variants={fadeInUp} custom={index + 12} className="list-none md:list-disc">
               {item}
             </motion.li>
           ))}
