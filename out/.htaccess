@@ -2,11 +2,12 @@
     RewriteEngine On
     RewriteBase /
   
-    # Allow access to existing files and directories
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
+    # Allow requests to existing files and directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
   
-    # Serve index.html for all non-existent routes, preserving the URL
-    RewriteRule ^(.*)$ /index.html [QSA,L]
+    # Rewrite all other requests to index.html but keep the URL
+    RewriteRule ^(.*)$ /index.html [L,QSA]
   </IfModule>
   
