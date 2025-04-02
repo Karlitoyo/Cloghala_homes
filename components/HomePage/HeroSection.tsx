@@ -12,6 +12,7 @@ const HeroSection = () => (
         style={{ objectFit: 'cover' }}
         priority={true}
         quality={80}
+        loading="lazy"
       />
     </div>
     {/* Overlay for better text visibility */}

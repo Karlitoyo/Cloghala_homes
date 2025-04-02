@@ -40,6 +40,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
               height={75}
               priority
               quality={100}
+              loading="lazy"
             />
           </a>
 
