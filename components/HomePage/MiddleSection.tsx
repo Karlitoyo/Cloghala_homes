@@ -44,11 +44,11 @@ const MiddleSection = () => (
         <h3 className="text-2xl font-bold text-yellowApp">Home Renovations</h3>
         <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
-            "Construction",
-            "Renovations & Upgrades",
             "Building Maintenance",
-            "Project Management",
+            "Construction",
             "Mechanical & Plumbing Integration",
+            "Project Management",
+            "Renovations & Upgrades",
           ].map((item, index) => (
             <motion.li key={index} variants={fadeInUp} custom={index + 3} className="list-none md:list-disc">
               {item}
@@ -106,8 +106,8 @@ const MiddleSection = () => (
         <h3 className="text-2xl font-bold text-yellowApp">Additional Services</h3>
         <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
-            "Interior & Exterior Design",
             "Energy Efficiency Upgrades",
+            "Interior & Exterior Design",
           ].map((item, index) => (
             <motion.li key={index} variants={fadeInUp} custom={index + 12} className="list-none md:list-disc">
               {item}
