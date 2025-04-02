@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -62,9 +63,11 @@ const MiddleSection = () => (
         variants={fadeInUp}
         custom={8}
       >
-        <img
+        <Image
           src="/images/homePage/Svgs/home_renovations.svg"
           alt="Home Renovation Icon"
+          width={256}
+          height={256}
           className="w-40 h-40 md:w-64 md:h-64"
         />
       </motion.div>
@@ -85,9 +88,11 @@ const MiddleSection = () => (
         variants={fadeInUp}
         custom={10}
       >
-        <img
+        <Image
           src="/images/homePage/Svgs/engineer.svg"
           alt="Engineer Icon"
+          width={256}
+          height={256}
           className="w-40 h-40 md:w-64 md:h-64"
         />
       </motion.div>
