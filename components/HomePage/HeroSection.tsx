@@ -11,6 +11,7 @@ const HeroSection = () => (
         sizes="100vw"
         style={{ objectFit: 'cover' }}
         priority={true}
+        quality={80}
       />
     </div>
     {/* Overlay for better text visibility */}

@@ -39,6 +39,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
               width={75}
               height={75}
               priority
+              quality={100}
             />
           </a>
 
