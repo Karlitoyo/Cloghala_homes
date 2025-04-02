@@ -4,7 +4,7 @@ import MiddleSection from "../components/HomePage/MiddleSection";
 import BottomSection from "../components/HomePage/BottomSection";
 
 const IndexPage = () => (
-  <Layout title="Home | Cloghala">
+  <Layout title="Home | Cloghala Homes">
     <HeroSection />
     <MiddleSection />
     <BottomSection />

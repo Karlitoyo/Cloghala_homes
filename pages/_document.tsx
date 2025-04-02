@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta property="og:title" content="Cloghala Homes" />
-        <meta property="og:description" content="Built on the strong foundation of HPC, a trusted name in plumbing and mechanical services, Cloghala Homes brings the same commitment to quality, innovation, and reliability to the building sector." />
+        <meta property="og:description" content="A trusted name in plumbing and mechanical services, Cloghala Homes brings the same commitment of quality, innovation, and reliability to the building sector." />
         <meta property="og:image" content="/images/homePage/Logo/logo.jpg" />
         <meta property="og:url" content="https://www.cloghala.ie/" />
         <meta property="og:type" content="website" />
