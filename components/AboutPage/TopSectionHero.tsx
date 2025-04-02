@@ -22,7 +22,7 @@ const fadeInRight = {
 };
 
 const TopHeroSection = () => (
-  <section className="flex flex-col md:flex-row min-h-screen w-full font-montserrat">
+  <section className="flex flex-col md:flex-row lg:min-h-screen mg:min-h-screen w-full font-montserrat">
     {/* Left Side - Our History Section */}
     <motion.div
       className="w-full md:w-1/2 h-auto bg-dark flex flex-col items-center justify-center p-6 sm:p-10 text-yellowApp mt-20 md:mt-0"
