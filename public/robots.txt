@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cloghala.ie
+
+# Sitemaps
+Sitemap: https://cloghala.ie/sitemap.xml
