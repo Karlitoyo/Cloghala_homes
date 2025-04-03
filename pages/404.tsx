@@ -1,9 +1,9 @@
 // pages/404.tsx
 import Head from 'next/head';
 import Link from 'next/link';
-import { FC } from 'react';
+import React from 'react';
 
-const Custom404: FC = () => {
+const Custom404: React.FC = () => {
     return (
         <>
             <Head>
