@@ -67,7 +67,7 @@ const TopSection = () => {
 
   if (state.succeeded) {
     return (
-      <section className="relative flex flex-col items-center justify-center w-full py-40 bg-dark font-montserrat vh-100">
+      <section className="relative flex flex-col items-center justify-center w-full py-40 bg-dark font-montserrat min-h-screen">
         <div className="max-w-4xl mx-auto my-10 p-8 bg-dark text-yellowApp shadow-lg rounded-lg">
           <h2 className="text-2xl font-bold mb-4">Thank You!</h2>
           <p>Your message has been sent successfully. We'll get back to you soon.</p>
@@ -77,7 +77,7 @@ const TopSection = () => {
   }
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-40 bg-dark font-montserrat vh-100">
+    <section className="relative flex flex-col items-center justify-center w-full py-40 bg-dark font-montserrat min-h-screen">
       <div className="flex flex-col md:flex-row max-w-4xl mx-auto my-10 shadow-lg rounded-lg overflow-hidden">
         {/* Contact Info */}
         <div className="md:w-1/3 bg-dark text-yellowApp p-6 flex flex-col justify-between">

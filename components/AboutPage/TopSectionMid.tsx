@@ -14,7 +14,7 @@ const TopMidSection = () => (
         viewport={{ once: true }}
       >
         <h2 className="text-2xl md:text-4xl font-bold">What sets us apart?</h2>
-        <ul className="pl-5 mt-4 space-y-3 text-lg md:text-2xl leading-relaxed">
+        <ul className="list-none p-0 mt-4 space-y-3 text-lg md:text-2xl leading-relaxed">
           <motion.li
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

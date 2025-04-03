@@ -7,9 +7,11 @@ const HeroSection = () => (
       <Image className="opacity-25"
         src="/images/homePage/HeroSection/HeroSectionImage.jpg"
         alt="Background"
-        layout="fill"
-        objectFit="cover"
-        priority={true}
+        fill
+        sizes="100vw"
+        style={{ objectFit: 'cover' }}
+        quality={80}
+        loading="lazy"
       />
     </div>
     {/* Overlay for better text visibility */}

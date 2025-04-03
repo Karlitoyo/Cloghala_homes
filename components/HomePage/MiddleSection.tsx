@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -36,20 +37,20 @@ const MiddleSection = () => (
     >
       {/* Left Side - Home Renovations */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         variants={fadeInUp}
         custom={2}
       >
         <h3 className="text-2xl font-bold text-yellowApp">Home Renovations</h3>
-        <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
+        <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
-            "Construction",
-            "Renovations & Upgrades",
             "Building Maintenance",
-            "Project Management",
+            "Construction",
             "Mechanical & Plumbing Integration",
+            "Project Management",
+            "Renovations & Upgrades",
           ].map((item, index) => (
-            <motion.li key={index} variants={fadeInUp} custom={index + 3}>
+            <motion.li key={index} variants={fadeInUp} custom={index + 3} className="list-none md:list-disc">
               {item}
             </motion.li>
           ))}
@@ -62,9 +63,11 @@ const MiddleSection = () => (
         variants={fadeInUp}
         custom={8}
       >
-        <img
+        <Image
           src="/images/homePage/Svgs/home_renovations.svg"
           alt="Home Renovation Icon"
+          width={256}
+          height={256}
           className="w-40 h-40 md:w-64 md:h-64"
         />
       </motion.div>
@@ -85,26 +88,28 @@ const MiddleSection = () => (
         variants={fadeInUp}
         custom={10}
       >
-        <img
+        <Image
           src="/images/homePage/Svgs/engineer.svg"
           alt="Engineer Icon"
+          width={256}
+          height={256}
           className="w-40 h-40 md:w-64 md:h-64"
         />
       </motion.div>
 
       {/* Right Side - Additional Services */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col items-start text-left"
+        className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         variants={fadeInUp}
         custom={11}
       >
         <h3 className="text-2xl font-bold text-yellowApp">Additional Services</h3>
-        <ul className="text-yellowApp text-lg list-disc space-y-3 mt-4 pl-6">
+        <ul className="text-yellowApp text-lg md:list-disc space-y-3 mt-4 pl-0 md:pl-6">
           {[
-            "Interior & Exterior Design",
             "Energy Efficiency Upgrades",
+            "Interior & Exterior Design",
           ].map((item, index) => (
-            <motion.li key={index} variants={fadeInUp} custom={index + 12}>
+            <motion.li key={index} variants={fadeInUp} custom={index + 12} className="list-none md:list-disc">
               {item}
             </motion.li>
           ))}
