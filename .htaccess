@@ -13,6 +13,11 @@
 </IfModule>
 
 <IfModule mod_headers.c>
+  # Set the default character set to UTF-8
+  Header set Content-Type "text/html; charset=UTF-8"
+  <FilesMatch "\.(xml|rss)$">
+  Header set Content-Type "application/xml"
+  </FilesMatch>
   # Set cache headers for images
   <FilesMatch "\.(jpg|jpeg|png|gif|ico|webp)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
