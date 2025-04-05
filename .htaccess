@@ -31,38 +31,6 @@
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
   # Set cache headers for JSON files
-  <FilesMatch "\.(json)$">
-    Header set Cache-Control "max-age=31536000, public"
-  </FilesMatch>
-
-  # Set cache headers for images
-  <FilesMatch "\.(jpg|jpeg|png|gif|ico)$">
-    Header set Cache-Control "max-age=31536000, public"
-  </FilesMatch>
-
-  # Enable compression for text files
-  <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
-    DeflateCompressionLevel 6
-    Header append Vary User-Agent env=!dont-vary
-  </IfModule>
-  # Enable compression for images
-  <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
-    Header append Vary User-Agent env=!dont-vary
-  </IfModule>
-
-  # Disable caching for specific file types
-  <FilesMatch "\.(php|pl|cgi)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </FilesMatch>
-
-  # Set security headers
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-XSS-Protection "1; mode=block"
-  Header set X-Frame-Options "DENY"
   # Enable CORS
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
