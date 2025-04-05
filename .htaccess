@@ -16,20 +16,8 @@
   # Set the default character set to UTF-8
   Header set Content-Type "text/html; charset=UTF-8"
   # Set cache headers for images
-  Header set Cache-Control "max-age=31536000, public"
   Header set Pragma "public"
   
-  # Set cache headers for HTML files
-  <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </FilesMatch>
-
-  # Set cache headers for CSS and JS files
-  <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "max-age=31536000, public"
-  </FilesMatch>
   # Set cache headers for JSON files
   # Enable CORS
   Header set Access-Control-Allow-Origin "*"
