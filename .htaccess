@@ -6,15 +6,13 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   # Allow requests to specific pages like /about and /contact
-  RewriteRule ^(about|contact)$ /index.html [L,QSA]
+  RewriteRule ^(about|contact|commercialResidential|socialHousingRL|emergencyHousing|socialHousing)$ /index.html [L,QSA]
   
   # Serve a custom 404 page for genuinely non-existent paths
   ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # Set the default character set to UTF-8
-  Header set Content-Type "text/html; charset=UTF-8"
   # Set cache headers for images
   <FilesMatch "\.(jpg|jpeg|png|gif|ico|webp)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
@@ -23,23 +21,17 @@
   <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
-# Set cache headers for CSS and JS
-<FilesMatch "\.(css|js)$">
-  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-  Header set Pragma "no-cache"
-  Header set Expires 0
-</FilesMatch>
-
+  # Set cache headers for CSS and JS
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
   # Set cache headers for SVG
   <FilesMatch "\.(svg)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   # Don't cache HTML files
-  # Avoid caching HTML — always revalidate
   <FilesMatch "\.(html|htm|php)$">
-    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-    Header set Pragma "no-cache"
-    Header set Expires 0
+    Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
   # Enable CORS
   Header set Access-Control-Allow-Origin "*"
