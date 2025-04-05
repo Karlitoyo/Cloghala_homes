@@ -22,9 +22,9 @@
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   # Set cache headers for CSS and JS
-  <!-- <FilesMatch "\.(css|js)$">
+  <FilesMatch "\.(css|js)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch> -->
+  </FilesMatch>
   # Set cache headers for SVG
   <FilesMatch "\.(svg)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
