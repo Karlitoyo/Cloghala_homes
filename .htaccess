@@ -3,8 +3,11 @@
  <IfModule mod_rewrite.c>
    RewriteEngine On
    RewriteBase /
- @@ -8,48 +9,52 @@
+   # If the request is for an existing directory, serve it directly
    RewriteCond %{REQUEST_FILENAME} -d
+   RewriteRule ^ - [L]
+   # If the request is for an existing file, serve it directly
+   RewriteCond %{REQUEST_FILENAME} -f
    RewriteRule ^ - [L]
  
    # Serve a custom 404 page for non-existing files
