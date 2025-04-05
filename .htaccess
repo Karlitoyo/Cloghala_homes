@@ -1,35 +1,19 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-
-  # Redirect requests for existing files and directories
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  # Allow requests to specific pages like /about and /contact
-  RewriteRule ^(about|contact)$ /index.html [L,QSA]
-  
-  # Serve a custom 404 page for genuinely non-existent paths
-  ErrorDocument 404 /404.html
-</IfModule>
-
 <IfModule mod_headers.c>
-  # Set the default character set to UTF-8
+  # UTF-8 default
   Header set Content-Type "text/html; charset=UTF-8"
-  # Set cache headers for images
-  Header set Pragma "public"
-  
-  # Set cache headers for JSON files
+
+  # Avoid caching HTML — always revalidate
+  <FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+
+  # For CSS & JS — cache busting recommended via query strings
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
   # Enable CORS
   Header set Access-Control-Allow-Origin "*"
-</IfModule>
-
-<IfModule mod_gzip.c>
-  mod_gzip_on Yes
-  mod_gzip_dechunk Yes
-  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
-  mod_gzip_item_include handler ^cgi-script$
-  mod_gzip_item_include mime ^text/.*
-  mod_gzip_item_include mime ^application/x-javascript.*
-  mod_gzip_item_exclude mime ^image/.*
-  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </IfModule>
