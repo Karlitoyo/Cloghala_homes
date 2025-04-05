@@ -12,15 +12,15 @@ const nextConfig = {
     });
     return config;
   },
-  // trailingSlash: true, // Corrected naming
-  // exportPathMap: async function () {
-  //   return {
-  //     '/': { page: '/' },
-  //     '/about': { page: '/about' },
-  //     '/contact': { page: '/contact' },
-  //     // Add any additional routes needed
-  //   }
-  // },
+  trailingSlash: true, // Corrected naming
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/' },
+      '/about': { page: '/about' },
+      '/contact': { page: '/contact' },
+      // Add any additional routes needed
+    }
+  },
 };
 
 module.exports = nextConfig;  // Change from `export default nextConfig`
