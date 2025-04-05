@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 const ContactPage = () => (
   <>
-      <Head>
+      {/* <Head>
         <title>Contact | Cloghala</title>
         <meta name="description" content="Get in touch with us at Cloghala." />
         <script type="application/ld+json">
@@ -16,7 +16,7 @@ const ContactPage = () => (
             "url": "https://cloghala.ie/contact"
           })}
         </script>
-      </Head>
+      </Head> */}
 
     <Layout title="Contact | Cloghala">
       <Script src="https://www.google.com/recaptcha/api.js?render=6LeIuAQrAAAAAJinmxQ4L_QLoHlxWPf87Vfc8iiV" />

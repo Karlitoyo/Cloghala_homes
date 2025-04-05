@@ -8,7 +8,7 @@ import Head from 'next/head';
 
 const AboutPage = () => (
   <>
-    <Head>
+    {/* <Head>
       <title>About | Cloghala</title>
       <meta name="description" content="Learn more about Cloghala, our mission, and our team." />
       <script type="application/ld+json">
@@ -19,7 +19,7 @@ const AboutPage = () => (
           "url": "https://cloghala.ie/about"
         })}
       </script>
-    </Head>
+    </Head> */}
 
     <Layout title="About | Cloghala">
       <TopHeroSection />
