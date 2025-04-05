@@ -13,21 +13,34 @@
 </IfModule>
 
 <IfModule mod_headers.c>
-  # UTF-8 default
+  # Set the default character set to UTF-8
   Header set Content-Type "text/html; charset=UTF-8"
+  # Set cache headers for images
+  <FilesMatch "\.(jpg|jpeg|png|gif|ico|webp)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Set cache headers for fonts
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+# Set cache headers for CSS and JS
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</FilesMatch>
 
+  # Set cache headers for SVG
+  <FilesMatch "\.(svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Don't cache HTML files
   # Avoid caching HTML — always revalidate
   <FilesMatch "\.(html|htm|php)$">
     Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
     Header set Pragma "no-cache"
     Header set Expires 0
   </FilesMatch>
-
-  # For CSS & JS — cache busting recommended via query strings
-  <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
-
   # Enable CORS
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
