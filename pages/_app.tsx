@@ -20,9 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
         <meta name="description" content="A trusted name in plumbing and mechanical services, Cloghala Homes provides quality, innovation, and reliability to the building sector." />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png" />
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <div className='bg-dark'>
         <GoogleReCaptchaProvider
-          reCaptchaKey="6LeIuAQrAAAAAJinmxQ4L_QLoHlxWPf87Vfc8iiV"
+          reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           scriptProps={{
             async: false,
             defer: false,

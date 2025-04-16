@@ -19,7 +19,7 @@ const ContactPage = () => (
       </Head>
 
     <Layout title="Contact | Cloghala">
-      <Script src="https://www.google.com/recaptcha/api.js?render=6LeIuAQrAAAAAJinmxQ4L_QLoHlxWPf87Vfc8iiV" />
+      <Script src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`} />
       <TopSection />
     </Layout>
   </>
