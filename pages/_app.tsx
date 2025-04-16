@@ -23,6 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/favicons/android-chrome-512x512.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="/images/favicons/site.webmanifest" />
       </Head>
       <div className='bg-dark'>
         <GoogleReCaptchaProvider
