@@ -39,7 +39,7 @@ const TopSection = () => {
       setSubmitting(true);
       const token = await executeRecaptcha('submit');
 
-      const response = await fetch('https://cloghala-form-server.vercel.app/api/contact', {
+      const response = await fetch('https://contact-form-api-p136.onrender.com/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
