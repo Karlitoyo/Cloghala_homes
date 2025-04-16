@@ -39,7 +39,7 @@ const TopSection = () => {
       setSubmitting(true);
       const token = await executeRecaptcha('submit');
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_FORM_SERVER_URL}`, {
+      const response = await fetch('https://cloghala-form-server.vercel.app/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
