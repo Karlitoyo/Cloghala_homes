@@ -39,7 +39,7 @@ const TopSection = () => {
       setSubmitting(true);
       const token = await executeRecaptcha('submit');
 
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_FORM_SERVER_URL}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
