@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 const TopSection = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -154,12 +155,16 @@ const TopSection = () => {
               This site is protected by reCAPTCHA v3. By submitting, you agree to Google's Privacy Policy and Terms of Service.
             </div>
 
-            <button 
-              type="submit" 
-              className="bg-footerBrown text-yellowApp px-6 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200" 
+            <button
+              type="submit"
+              className="bg-footerBrown text-yellowApp px-6 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200 flex items-center justify-center"
               disabled={submitting || !recaptchaLoaded}
             >
-              {submitting ? "Sending..." : "Send Message"}
+              {submitting ? (
+                <ClipLoader size={20} color="#FFD700" />
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </div>
