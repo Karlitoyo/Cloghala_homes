@@ -40,77 +40,56 @@ const MiddleBottomSection = () => (
           </div>
         </div>
 
-        {/* Second Div - Stats */}
-        <div className="relative p-6 rounded-lg shadow-lg self-start w-full h-auto flex items-center justify-center min-h-[250px]">
+        <div className="relative p-4 md:p-6 rounded-lg shadow-lg self-start w-full h-auto flex items-center justify-center min-h-[250px]">
           {/* Background Layer */}
           <div className="absolute inset-0 bg-yellowApp bg-opacity-15 rounded-lg z-0 md:rounded-br-midAboutCustom-bl md:rounded-tr-midAboutCustom-bl"></div>
 
           {/* Content Layer */}
           <div className="relative z-10 text-yellowApp text-center w-full">
-            {/* Title for the section */}
-            <h3 className="text-xl font-bold mb-6">External Resources</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">External Resources</h3>
 
-            {/* External Articles Section */}
-            <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-0 md:gap-0 justify-items-center">
-              <div className="relative overflow-hidden rounded-lg shadow-lg h-[200px] w-[220px] transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <Image
-                  src="/images/aboutPage/dng-logo.png"
-                  alt="Article 1"
-                  className="w-full h-full"
-                  width={220}
-                  height={200}
-                  style={{ objectFit: 'contain' }}
-                  priority
-                />
-                <a
-                  href="https://dnggalvin.ie/assessing-the-feasibility-of-renovating-old-properties-in-ireland/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-60 text-white text-center font-bold text-xs sm:text-sm"
+            <div className="w-full max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 px-2 justify-items-center">
+              {[
+                {
+                  href: "https://dnggalvin.ie/assessing-the-feasibility-of-renovating-old-properties-in-ireland/",
+                  src: "/images/aboutPage/dng-logo.png",
+                  alt: "Article 1",
+                  title: "Assessing the Feasibility of Renovating Old Properties in Ireland",
+                },
+                {
+                  href: "https://www.seai.ie/sites/default/files/publications/Promoting-retrofitting-among-homeowners-in-Ireland-through-a-behavioural-lens.pdf",
+                  src: "/images/aboutPage/seai-logo.svg",
+                  alt: "Article 2",
+                  title: "Promoting retrofitting among homeowners in Ireland",
+                },
+                {
+                  href: "https://www.riai.ie/whats-on/news/riai-publishes-old-house-new-home-a-free-online-guide",
+                  src: "/images/aboutPage/riai-logo.svg",
+                  alt: "Article 3",
+                  title: "RIAI publishes Old House New Home - reimagine and conserve an older home",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg w-full max-w-[220px] aspect-[4/3] bg-white"
                 >
-                  Assessing the Feasibility of Renovating Old Properties in Ireland
-                </a>
-              </div>
-
-              <div className="relative overflow-hidden rounded-lg shadow-lg h-[200px] w-[220px] transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <Image
-                  src="/images/aboutPage/seai-logo.svg"
-                  alt="Article 2"
-                  className="w-full h-32"
-                  width={220}
-                  height={200}
-                  style={{ objectFit: 'contain' }}
-                  priority
-                />
-                <a
-                  href="https://www.seai.ie/sites/default/files/publications/Promoting-retrofitting-among-homeowners-in-Ireland-through-a-behavioural-lens.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-60 text-white text-center font-bold text-xs sm:text-sm"
-                >
-                  Promoting retrofitting among homeowners in Ireland
-                </a>
-              </div>
-
-              <div className="relative overflow-hidden rounded-lg shadow-lg h-[200px] w-[220px] transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl sm:col-span-2 lg:col-span-1">
-                <Image
-                  src="/images/aboutPage/riai-logo.svg"
-                  alt="Article 3"
-                  className="w-full h-32"
-                  width={220}
-                  height={200}
-                  style={{ objectFit: 'contain' }}
-                  priority
-                />
-                <a
-                  href="https://www.riai.ie/whats-on/news/riai-publishes-old-house-new-home-a-free-online-guide"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-60 text-white text-center font-bold text-xs sm:text-sm"
-                >
-                  RIAI publishes Old House New Home - reimagine and conserve an older home
-                </a>
-              </div>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-contain p-4"
+                    priority
+                  />
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-60 text-white text-center font-semibold text-xs sm:text-sm"
+                  >
+                    {item.title}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </div>
