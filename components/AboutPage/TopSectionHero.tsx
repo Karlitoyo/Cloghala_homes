@@ -22,10 +22,10 @@ const fadeInRight = {
 };
 
 const TopHeroSection = () => (
-  <section className="flex flex-col md:flex-row lg:min-h-screen mg:min-h-screen w-full font-montserrat">
+  <section className="flex flex-col lg:flex-row lg:min-h-screen w-full font-montserrat">
     {/* Left Side - Our History Section */}
     <motion.div
-      className="w-full md:w-1/2 h-auto bg-dark flex flex-col items-center justify-center p-6 sm:p-10 text-yellowApp mt-20 md:mt-0"
+      className="w-full lg:w-1/2 h-auto bg-dark flex flex-col items-center justify-center p-6 sm:p-10 text-yellowApp mt-20 lg:mt-0"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -48,34 +48,34 @@ const TopHeroSection = () => (
 
     {/* Right Side - We Provide Section */}
     <motion.div
-      className="w-full md:w-1/2 bg-yellowApp flex flex-col items-center justify-center p-6 sm:p-10 md:rounded-bl-heroCustom-bl"
+      className="w-full lg:w-1/2 bg-yellowApp flex flex-col items-center justify-center p-6 sm:p-10 lg:rounded-bl-heroCustom-bl"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
       <motion.ul
-      className="text-black text-xl sm:text-2xl text-center sm:text-center space-y-4 sm:w-3/4"
-      variants={fadeInRight}
-      custom={2}
-      >
-      <motion.h3
-        className="font-bold text-center"
+        className="text-black text-xl sm:text-2xl text-center sm:text-center space-y-4 sm:w-3/4"
         variants={fadeInRight}
-        custom={3}
+        custom={2}
       >
-        We Provide
-      </motion.h3>
-      {[
-        "Construction",
-        "Renovations & Upgrades",
-        "Building Maintenance",
-        "Project Management",
-        "Mechanical & Plumbing Integration",
-      ].map((item, index) => (
-        <motion.li key={index} variants={fadeInRight} custom={index + 4}>
-        {item}
-        </motion.li>
-      ))}
+        <motion.h3
+          className="font-bold text-center"
+          variants={fadeInRight}
+          custom={3}
+        >
+          We Provide
+        </motion.h3>
+        {[
+          "Construction",
+          "Renovations & Upgrades",
+          "Building Maintenance",
+          "Project Management",
+          "Mechanical & Plumbing Integration",
+        ].map((item, index) => (
+          <motion.li key={index} variants={fadeInRight} custom={index + 4}>
+            {item}
+          </motion.li>
+        ))}
       </motion.ul>
     </motion.div>
   </section>
