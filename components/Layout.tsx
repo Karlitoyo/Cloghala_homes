@@ -34,7 +34,7 @@ const Layout = ({ children, title = "Layout" }: Props) => {
             className={`text-2xl font-semibold transition duration-300`}
           >
             <Image
-              src="/images/homePage/Logo/logo.jpg"
+              src="/images/homePage/Logo/CloghalaHomes_Logo-02.png"
               alt="Logo"
               width={75}
               height={75}

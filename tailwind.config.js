@@ -14,7 +14,7 @@ module.exports = {
         secondary: "#F59E0B", // Custom amber
         accent: "#10B981", // Custom green
         dark: "#111111", // Custom dark gray
-        yellowApp: "#EADF97", // Custom yellow
+        yellowApp: "#EBBA3C", // Custom yellow
         footerBrown: "#231F1D" // Custom footer brown
       },
       borderRadius: {
