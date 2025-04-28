@@ -6,4 +6,4 @@ Allow: /
 Host: https://cloghala.ie
 
 # Sitemaps
-Sitemap: https://cloghala.ie/sitemap.xml
+Sitemap: https://cloghala.ie/sitemap-0.xml
